@@ -8,8 +8,8 @@ COUNT=$(echo "$LOG" | wc -l)
 echo "$LOG"
 echo "$COUNT"
 
-if [ $COUNT -gt $GRASS_LIMIT ]; then
-    echo "TOUCH GRASS LMAO"
-else
+if [ "$COUNT" -lt "$GRASS_LIMIT" ]; then
     echo "fine for now"
+else
+    echo "TOUCH GRASS LMAO"
 fi
