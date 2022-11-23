@@ -2,7 +2,11 @@
 
 GRASS_LIMIT=4
 
-COUNT=$(git log --after=yesterday --pretty=oneline | wc -l)
+LOG=$(git log --after="1 day ago" --pretty=oneline)
+COUNT=$(echo "$LOG" | wc -l)
+
+echo "$LOG"
+echo "$COUNT"
 
 if [ $COUNT -gt $GRASS_LIMIT ]; then
     echo "TOUCH GRASS LMAO"
