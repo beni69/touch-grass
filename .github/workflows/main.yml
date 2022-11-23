@@ -1,0 +1,11 @@
+name: touch grass
+
+on: [push]
+
+jobs:
+  steve:
+    name: if __name__ == __main__
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: ./github/workflows/grass.sh
