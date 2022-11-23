@@ -1,6 +1,6 @@
 #!/bin/sh
 
-GRASS_LIMIT=4
+GRASS_LIMIT=$1
 
 LOG=$(git log --after="1 day ago" --pretty=oneline)
 COUNT=$(echo "$LOG" | wc -l)
